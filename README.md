@@ -13,7 +13,7 @@
 
 ## 安装方式
 
-1. 打开 Chromium 内核浏览器的扩展管理页，例如 `chrome://extensions/`
+1. 打开 Chromium 内核浏览器的扩展管理页，例如 `chrome://extensions/`（Egde浏览器为'edge://extensions/')
 2. 开启“开发者模式”
 3. 选择“加载已解压的扩展程序”
 4. 在目录找到下载的文件夹打开 
