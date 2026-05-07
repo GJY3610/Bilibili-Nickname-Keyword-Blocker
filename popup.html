@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B 站昵称关键词拉黑</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="hero">
+        <p class="eyebrow">Bilibili Web Extension</p>
+        <h1>B 站昵称关键词拉黑</h1>
+        <p class="subtitle">默认只扫描评论区昵称；你也可以关闭限制，恢复成整页匹配，再手动或自动执行拉黑。</p>
+      </header>
+
+      <section class="card switches">
+        <label class="switch">
+          <input id="enabled" type="checkbox">
+          <span>启用插件</span>
+        </label>
+        <label class="switch">
+          <input id="commentsOnly" type="checkbox">
+          <span>仅评论区生效</span>
+        </label>
+        <label class="switch">
+          <input id="autoBlock" type="checkbox">
+          <span>自动拉黑命中用户</span>
+        </label>
+        <label class="switch">
+          <input id="debugEnabled" type="checkbox">
+          <span>输出调试日志（F12）</span>
+        </label>
+        <label class="switch">
+          <input id="hideMatched" type="checkbox">
+          <span>页面中弱化显示命中内容</span>
+        </label>
+        <label class="switch">
+          <input id="caseSensitive" type="checkbox">
+          <span>关键词区分大小写</span>
+        </label>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>昵称关键词</h2>
+          <span id="keywordCount" class="pill">0 个</span>
+        </div>
+        <textarea id="keywords" rows="8" placeholder="一行一个关键词，例如：&#10;互粉&#10;抽奖&#10;引流"></textarea>
+        <p class="hint">“仅评论区生效”默认开启。打开“输出调试日志（F12）”后，可以在控制台看到识别到的昵称、UID、命中结果和跳过原因。</p>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>最近处理记录</h2>
+          <button id="clearHistory" class="ghost" type="button">清空记录</button>
+        </div>
+        <ul id="recentList" class="recent-list"></ul>
+      </section>
+
+      <footer class="footer">
+        <span id="statusText">尚未保存</span>
+        <button id="saveButton" class="primary" type="button">保存设置</button>
+      </footer>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

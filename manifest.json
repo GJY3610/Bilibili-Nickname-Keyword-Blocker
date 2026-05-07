@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili Nickname Keyword Blocker",
+  "description": "在网页端哔哩哔哩按昵称关键词匹配用户，并支持一键或自动拉黑。",
+  "version": "0.1.0",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "B 站昵称关键词拉黑",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bilibili.com/*"
+      ],
+      "js": [
+        "shared.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-bridge.js"
+      ],
+      "matches": [
+        "https://*.bilibili.com/*"
+      ]
+    }
+  ]
+}
