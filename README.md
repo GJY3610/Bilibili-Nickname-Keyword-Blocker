@@ -1,4 +1,5 @@
 # B 站昵称关键词拉黑扩展
+本项目源于linux.do的支持，感谢L站https://linux.do/
 
 这是一个可直接加载到 Chromium 或 Edge 浏览器中的 Manifest V3 扩展，用来在网页端哔哩哔哩按用户昵称关键词匹配用户，并执行手动或自动拉黑。
 <img width="546" height="903" alt="image" src="https://github.com/user-attachments/assets/48dc21d0-6689-42a8-aa7c-9c1af852378e" />
